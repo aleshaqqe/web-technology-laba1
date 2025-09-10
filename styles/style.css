@@ -1,0 +1,319 @@
+@charset "UTF-8";
+/*include font-family*/
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*function rem*/
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*Main styles*/
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header__menu-list {
+  display: flex;
+  justify-content: end;
+  gap: 3.75rem;
+}
+
+.header {
+  background-color: #1E1E1E;
+}
+
+.header__menu {
+  padding: 2.1875rem 3.125rem;
+}
+
+.header__menu-link {
+  text-decoration: none;
+  color: #E9E3DC;
+  font-size: 1.125rem;
+  font-family: "Bowlby One", serif;
+  text-transform: uppercase;
+  font-weight: 1000;
+  padding: 22px 27px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__menu-link:hover {
+  background: #B3A0CD;
+  color: #1E1E1E;
+}
+
+.promo__burger {
+  text-align: center;
+}
+.promo__burger .promo__img {
+  margin: 0 auto;
+  margin-top: 1.875rem;
+}
+
+.promo__title {
+  font-size: 6.75rem;
+  font-weight: 400;
+  line-height: 89%;
+  text-transform: uppercase;
+  font-family: "Bowlby One", serif;
+  color: #E9E3DC;
+}
+
+main {
+  background: #1E1E1E;
+}
+main .promo__burger {
+  padding: 2.5rem;
+}
+
+.about {
+  align-items: center;
+  border-radius: 1.875rem;
+  background-color: #D1EF53;
+  padding: 6.25rem 9.375rem 5.3125rem 6.875rem;
+  display: flex;
+  margin-top: 2.1875rem;
+  gap: 6.25rem;
+}
+.about__title {
+  font-family: "Inter", serif;
+  font-size: 4.375rem;
+  line-height: 5.625rem;
+  text-transform: uppercase;
+}
+.about__btn {
+  display: inline-block;
+  margin-top: 2.1875rem;
+  border: 0.25rem solid #1E1E1E;
+  padding: 1.375rem 2.5rem;
+  background-color: #E9E3DC;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1E1E1E;
+  font-family: "bowlby One", serif;
+  font-weight: 400;
+  box-shadow: 6px 6px 0px #1e1e1e;
+  transition: all 0.3s;
+}
+.about__btn:active {
+  box-shadow: none !important;
+}
+
+.about__description {
+  font-size: 1.5rem;
+  font-family: "Inter", serif;
+  font-weight: 600;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.interier__title {
+  margin-top: 2.0625rem;
+  text-align: center;
+  font-family: "Inter", serif;
+  font-size: 4.375rem;
+  line-height: 5.625rem;
+  text-transform: uppercase;
+  color: #E9E3DC;
+}
+
+.interier__pic {
+  width: 31.25rem;
+  height: 31.25rem;
+  transition: all 1s;
+}
+
+.interier__imgs {
+  margin-top: 6.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.interier__pic:hover {
+  transform: scale(1.1);
+}
+
+.interier__pic {
+  border-radius: 1.875rem;
+}
+
+.img__block-2 {
+  width: 62.5rem;
+  height: 31.25rem;
+}
+
+.menu {
+  padding: 60px 0;
+  background-color: #fff8f0;
+  text-align: center;
+}
+
+.menu__title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #d94e1f;
+  font-weight: 700;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu__item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.menu__item:hover {
+  transform: translateY(-5px);
+}
+
+.menu__img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.menu__item-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.menu__item-desc {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.menu__item-price {
+  font-weight: 700;
+  color: #d94e1f;
+  font-size: 1rem;
+}
+
+.menu {
+  margin-top: 40px;
+}
+
+.menu__title {
+  margin-top: 2.0625rem;
+  text-align: center;
+  font-family: "Inter", serif;
+  font-size: 4.375rem;
+  line-height: 5.625rem;
+  text-transform: uppercase;
+  color: #E9E3DC;
+}
+
+.menu {
+  background-color: #1E1E1E;
+}
+
+.delivery__title {
+  color: #E9E3DC;
+  text-align: center;
+  font-family: "Inter", serif;
+  font-size: 4.375rem;
+  line-height: 5.625rem;
+  text-transform: uppercase;
+}
+
+.delivery__desc {
+  color: #E9E3DC;
+  text-align: center;
+  font-family: "Inter", serif;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
